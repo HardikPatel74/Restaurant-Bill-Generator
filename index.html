@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Bill Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurant Bill Generator</h1>
+        <form id="bill-form">
+            <input type="text" id="item-name" placeholder="Item Name" required>
+            <input type="number" id="item-quantity" placeholder="Quantity" required>
+            <input type="number" id="item-price" placeholder="Price per Item" required>
+            <button type="button" id="add-item">Add Item</button>
+            <input type="number" id="discount" placeholder="Discount (%)">
+            <input type="number" id="gst" placeholder="GST (%)">
+        </form>
+        <div id="bill-preview">
+            <h2>Bill Preview</h2>
+            <div id="bill-header">
+                <p><strong>Date:</strong> <span id="bill-date"></span></p>
+                <p><strong>Time:</strong> <span id="bill-time"></span></p>
+            </div>
+            <table id="bill-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <h3 id="total-amount">Total: ₹0</h3>
+            <h3 id="final-amount">Final Total (After Discount & GST): ₹0</h3>
+            <button id="download-bill">Download Bill</button>
+        </div>
+    </div>
+        <h3>Contact Me Here!!!</h3>
+        <div class="social-links">
+            <a href="https://github.com/HardikPatel74" class="github" target="_blank"></a>
+            <a href="https://www.instagram.com/hardikk_patel7/" class="instagram" target="_blank"></a>
+            <a href="https://x.com/HARDIKPATE87443?t=7Mikq6JWQeaKbfmCk2Y1ag&s=08" class="twitter" target="_blank"></a>
+        </div>
+        <footer>
+            <p>&copy; 2025 Hardik Patel. All rights reserved.</p>
+        </footer>        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
