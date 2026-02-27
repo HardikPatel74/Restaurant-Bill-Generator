@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
         billItems.push({
             item: itemName,
             quantity: itemQuantity,
-            price: `$${itemPrice.toFixed(2)}`,
-            total: `$${itemTotal.toFixed(2)}`
+            price: `₹${itemPrice.toFixed(2)}`,
+            total: `₹${itemTotal.toFixed(2)}`
         });
 
         // Add row to table in the browser
@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const gstAmount = (discountedAmount * gst) / 100;
         const finalAmount = discountedAmount + gstAmount;
 
-        totalAmountEl.textContent = `Total: $${totalAmount.toFixed(2)}`;
-        finalAmountEl.textContent = `Final Total (After Discount & GST): $${finalAmount.toFixed(2)}`;
+        totalAmountEl.textContent = `Total: ₹${totalAmount.toFixed(2)}`;
+        finalAmountEl.textContent = `Final Total (After Discount & GST): ₹${finalAmount.toFixed(2)}`;
     };
 
     discountInput.addEventListener('input', updateTotals);
@@ -107,3 +107,4 @@ document.addEventListener('DOMContentLoaded', () => {
         doc.save('bill.pdf');
     });
 });
+
